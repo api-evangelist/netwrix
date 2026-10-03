@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "@vocab": "https://netwrix.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "netwrix": "https://netwrix.com/schema#",
+    "PostTokenResponse": "netwrix:PostTokenResponse",
+    "access_token": {
+      "@id": "netwrix:access_token",
+      "@type": "xsd:string"
+    },
+    "token_type": {
+      "@id": "netwrix:token_type",
+      "@type": "xsd:string"
+    },
+    "expires_in": {
+      "@id": "netwrix:expires_in",
+      "@type": "xsd:integer"
+    },
+    "refresh_token": {
+      "@id": "netwrix:refresh_token",
+      "@type": "xsd:string"
+    },
+    "scope": {
+      "@id": "netwrix:scope",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Netwrix API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Netwrix's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-03) from openapi/_ae-authored/netwrix-openapi-generated.yml.",
+  "dcterms:created": "2026-10-03",
+  "dcterms:source": [
+    "openapi/_ae-authored/netwrix-openapi-generated.yml"
+  ]
+}

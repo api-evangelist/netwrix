@@ -1,23 +1,137 @@
 aid: netwrix
+
 name: Netwrix
-description: 'Netwrix is a company surfaced via the API Evangelist harvest backlog (source: gartner-mq)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.sanity.io/images/r09655ln/production/062d04e2794a7968846f6269de97062370fc5670-2400x1260.webp
+
+description: Netwrix provides data security and governance solutions that help organizations protect, monitor, and manage their critical information
+  assets. Their platform offers visibility into data usage, detects risky behavior, and ensures compliance with regulations such as GDPR, HIPAA,
+  and PCI DSS. Netwrix serves enterprises across various industries, delivering tools for privileged access management, data loss prevention,
+  and audit reporting, enabling IT teams to secure on-premises, cloud, and hybrid environments.
+
 url: https://raw.githubusercontent.com/api-evangelist/netwrix/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:gartner-mq
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-03 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-03'
+
 modified: '2026-10-03'
+
 tags:
 - Company
-apis: []
+- DataSecurity
+- Governance
+- Compliance
+- PrivilegedAccess
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/netwrix-netwrix-security.txt
+- type: Spectral
+  url: rules/netwrix-rules.yml
+- type: JSONLD
+  url: json-ld/netwrix-context.jsonld
+- type: Vocabulary
+  url: vocabulary/netwrix-vocabulary.yml
+- type: DataModel
+  url: data-model/netwrix-data-model.yml
+- type: Compliance
+  url: https://trust.netwrix.com/
+- type: Security
+  url: security/netwrix-vulnerability-disclosure.yml
+- type: Authentication
+  url: authentication/netwrix-authentication.yml
+- type: Conformance
+  url: conformance/netwrix-conformance.yml
+- type: LLMsTxt
+  url: llms/netwrix-llms.txt
+- type: SecurityTxt
+  url: well-known/netwrix-www-security.txt
+- type: SecurityTxt
+  url: well-known/netwrix-status-security.txt
+- type: SecurityTxt
+  url: well-known/netwrix-security.txt
+- type: SecurityTxt
+  url: well-known/netwrix-partner-security.txt
+- type: SecurityTxt
+  url: well-known/netwrix-customer-security.txt
+- type: WellKnown
+  url: well-known/netwrix-well-known.yml
+- type: Hosts
+  url: hosts/netwrix-hosts.yml
+- type: Vendors
+  url: vendors/netwrix-vendors.yml
+- type: StatusPage
+  url: https://status.netwrix.com/
+- type: PrivacyPolicy
+  url: https://www.netwrix.com/privacy.html
+- type: Newsroom
+  url: https://netwrix.com/en/resources/news/
+- type: GettingStarted
+  url: https://docs.netwrix.com/docs/1secure/configuration/registerconfig/1secure-classifier-setup-guide
+- type: GitHubOrganization
+  url: https://github.com/netwrix
+- type: TrustCenter
+  url: security/netwrix-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/netwrix-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/netwrix-domain-security.yml
 - type: Website
   url: https://www.netwrix.com
+- type: Documentation
+  url: https://docs.netwrix.com/
+- type: Pricing
+  url: https://netwrix.com/en/buy-now/
+- type: Support
+  url: https://netwrix.com/en/support/
+- type: Contact
+  url: https://netwrix.com/en/contact/
+- type: Blog
+  url: https://netwrix.com/en/resources/blog/
+
+apis:
+- name: Netwrix API
+  description: Netwrix provides a developer portal with documentation but no machine‑readable API contract was found.
+  humanURL: https://docs.netwrix.com/
+  aid: netwrix:netwrix-api-2
+- aid: netwrix:netwrix-api
+  name: Netwrix API
+  description: 'Netwrix API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-03); not
+
+    the provider''s own document.'
+  humanURL: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/overview
+  baseURL: https://accessgovernance.company.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/netwrix-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/netwrix-post-token-response-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Documentation site uses Docusaurus JavaScript rendering, no machine‑readable spec found.
+  evidence:
+  - url: https://docs.netwrix.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-03'
+  status: enriched
+  artifacts_added: 23
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

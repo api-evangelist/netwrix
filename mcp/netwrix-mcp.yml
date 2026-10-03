@@ -1,0 +1,34 @@
+generated: '2026-10-03'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/netwrix-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.netwrix.com, www.netwrix.com, community.netwrix.com, customer.netwrix.com;
+  verdict absent. Candidate tools below are derived from the 4 operation(s) in the provider's own OpenAPI (4 listed); they describe what a server
+  WOULD expose, not one that exists.
+tools:
+- name: get_api_v1_data_sa_adinventory_users_view_rows
+  operationId: get_api_v1_data_SA_ADInventory_UsersView_rows
+  method: GET
+  path: /api/v1/data/SA_ADInventory_UsersView/rows
+  description: Web Service REST API for Applications Accessing Data Remotely
+- name: post_api_v1_token
+  operationId: post_api_v1_token
+  method: POST
+  path: /api/v1/token
+  description: Use the Client Credentials to Grant a Refesh Token
+- name: post_oauth_token
+  operationId: post_oauth_token
+  method: POST
+  path: /oauth/token
+  description: Use the Client Credentials to Grant a Refesh Token
+- name: post_token
+  operationId: post_token
+  method: POST
+  path: /token
+  description: Use the Client Credentials Grant to Obtain an Access Token

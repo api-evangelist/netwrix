@@ -1,0 +1,16 @@
+generated: '2026-10-03'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/action/servicenow/authentication
+sources:
+- https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/action/servicenow/authentication
+- https://docs.netwrix.com/docs/accessanalyzer/11_6/solutions/databases/sql/configuration/sql_authentication
+- https://docs.netwrix.com/docs/accessanalyzer/11_6/tags/connection-profiles-and-credentials
+- https://docs.netwrix.com/docs/accessanalyzer/11_6/category/connection-profiles-and-credentials
+description: Authentication for ServiceNow action
+schemes:
+- type: http-basic
+  name: ServiceNow
+  evidence: User Name/Password – Specify the credentials to access the ServiceNow account
+  how_to_obtain: Enter the ServiceNow username and password in the Enterprise Auditor console’s global setting or in the action configuration
+docs: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/action/servicenow/authentication

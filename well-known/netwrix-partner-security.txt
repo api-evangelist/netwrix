@@ -1,0 +1,16 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:psirt@netwrix.com
+Expires: 2027-01-31T17:00:00.000Z
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/3F893BA6D239EC482E0D31A6203E15AA8A78F3E6
+Preferred-Languages: en
+Canonical: https://www.netwrix.com/.well-known/security.txt
+Canonical: https://www.netwrix.com/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARMIAB0WIQQ/iTum0jnsSC4NMaYgPhWqinjz5gUCZ5Oh5gAKCRAgPhWqinjz
+5jfnAQC7eXvUQ4HxdJWKw8mrTzZWv19YZxU9fulCZFe2IoPD6gD/ScH0aJw7x3gr
+NmCCj6pG96DWROFqdPhfC2j1WjW0LqA=
+=icHN
+-----END PGP SIGNATURE-----
