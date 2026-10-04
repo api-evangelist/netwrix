@@ -1,0 +1,23 @@
+{
+  "provider": "netwrix",
+  "sources": [
+    "_ae-authored/netwrix-openapi-generated.yml"
+  ],
+  "outputs": [
+    "netwrix-data-api-openapi.yml",
+    "netwrix-oauth-api-openapi.yml",
+    "netwrix-token-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "netwrix-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "netwrix-openapi-generated.yml: tagged paths GET /api/v1/data/SA_ADInventory_UsersView/rows -> Data",
+    "netwrix-openapi-generated.yml: tagged paths POST /api/v1/token -> Token",
+    "netwrix-openapi-generated.yml: declared missing tag: Data",
+    "apis.yml register: written (+3 apis, 4 total)"
+  ],
+  "skipped": []
+}

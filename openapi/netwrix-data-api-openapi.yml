@@ -1,0 +1,45 @@
+openapi: 3.2.0
+info:
+  title: Netwrix Data API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 4 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Netwrix has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 4
+    pages-with-code: 0
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/overview
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/obtaintoken
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/refreshtoken
+servers:
+- url: https://accessgovernance.company.com
+security:
+- ServiceNow: []
+tags:
+- name: Data
+paths:
+  /api/v1/data/SA_ADInventory_UsersView/rows:
+    get:
+      operationId: get_api_v1_data_SA_ADInventory_UsersView_rows
+      tags:
+      - Data
+      summary: Web Service REST API for Applications Accessing Data Remotely
+      x-source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/overview
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  securitySchemes:
+    ServiceNow:
+      type: http
+      scheme: basic
+      x-source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/action/servicenow/authentication

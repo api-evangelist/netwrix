@@ -105,23 +105,46 @@ common:
 
 apis:
 - name: Netwrix API
-  description: Netwrix provides a developer portal with documentation but no machine‑readable API contract was found.
+  description: >-
+    Netwrix provides a developer portal with documentation but no machine‑readable API contract was found.
   humanURL: https://docs.netwrix.com/
   aid: netwrix:netwrix-api-2
-- aid: netwrix:netwrix-api
-  name: Netwrix API
-  description: 'Netwrix API as documented publicly: 4 operations. Contract generated from the documentation by API Evangelist (2026-10-03); not
-
-    the provider''s own document.'
-  humanURL: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/overview
+- aid: netwrix:netwrix-data-api
+  name: Netwrix Data API
+  description: The Data API from Netwrix — 1 operation(s) for data.
+  humanURL: https://docs.netwrix.com/
   baseURL: https://accessgovernance.company.com
+  tags:
+  - Data
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/netwrix-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/netwrix-data-api-openapi.yml
   - type: JSONSchema
     url: json-schema/netwrix-post-token-response-schema.json
-
+- aid: netwrix:netwrix-oauth-api
+  name: Netwrix OAuth API
+  description: The Oauth API from Netwrix — 1 operation(s) for oauth.
+  humanURL: https://docs.netwrix.com/
+  baseURL: https://accessgovernance.company.com
+  tags:
+  - Oauth
+  properties:
+  - type: OpenAPI
+    url: openapi/netwrix-oauth-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/netwrix-post-token-response-schema.json
+- aid: netwrix:netwrix-token-api
+  name: Netwrix Token API
+  description: The Token API from Netwrix — 2 operation(s) for token.
+  humanURL: https://docs.netwrix.com/
+  baseURL: https://accessgovernance.company.com
+  tags:
+  - Token
+  properties:
+  - type: OpenAPI
+    url: openapi/netwrix-token-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/netwrix-post-token-response-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs

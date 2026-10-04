@@ -1,0 +1,137 @@
+openapi: 3.2.0
+info:
+  title: Netwrix Token API
+  version: '2026-10-03'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-03: 4 operation(s) read from 3 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; Netwrix has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 0
+    documentation: 4
+    pages-with-code: 0
+    pages-read: 3
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-03'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/overview
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/obtaintoken
+  - https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/refreshtoken
+servers:
+- url: https://accessgovernance.company.com
+security:
+- ServiceNow: []
+tags:
+- name: Token
+paths:
+  /api/v1/token:
+    post:
+      operationId: post_api_v1_token
+      tags:
+      - Token
+      summary: Use the Client Credentials to Grant a Refesh Token
+      description: Request a refresh token when the access token expires.
+      x-source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/refreshtoken
+      parameters:
+      - name: grant_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The grant_type parameter must be set to client_credentials
+      - name: refresh_token
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The refresh token previously issue to the client
+      - name: scope
+        in: query
+        required: false
+        schema:
+          type: string
+        description: The requested scope must not include additional scopes that the service didn't issue in the original access token
+      - name: client_id
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Client identifier
+      - name: client_secret
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Client secret
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /token:
+    post:
+      operationId: post_token
+      tags:
+      - Token
+      summary: Use the Client Credentials Grant to Obtain an Access Token
+      x-source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/settings/access/restapi/obtaintoken
+      parameters:
+      - name: grant_type
+        in: query
+        required: true
+        schema:
+          type: string
+        description: The grant_type parameter must be set to client_credentials
+      - name: scope
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Your service may support different scopes for the client credentials grant
+      - name: client_id
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Client identifier used for authentication
+      - name: client_secret
+        in: query
+        required: false
+        schema:
+          type: string
+        description: Client secret used for authentication
+      responses:
+        '200':
+          description: Success (status as documented)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PostTokenResponse'
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostTokenResponse:
+      type: object
+      properties:
+        access_token:
+          type: string
+          description: The issued access token
+        token_type:
+          type: string
+          description: Token type, typically "bearer"
+        expires_in:
+          type: integer
+          description: Lifetime of the access token in seconds
+        refresh_token:
+          type: string
+          description: Refresh token that can be used to obtain a new access token
+        scope:
+          type: string
+          description: Scope granted to the token
+  securitySchemes:
+    ServiceNow:
+      type: http
+      scheme: basic
+      x-source: https://docs.netwrix.com/docs/accessanalyzer/11_6/admin/action/servicenow/authentication
