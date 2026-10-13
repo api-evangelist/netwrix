@@ -1,0 +1,40 @@
+generated: '2026-10-13'
+method: searched
+checked:
+- https://azuremarketplace.microsoft.com/
+marketplace_apps: []
+edges:
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Netwrix%20Corporation
+  listing_count: 6
+  apps:
+  - Netwrix 1Secure for MSPs
+  - Netwrix Endpoint Protector
+  - Netwrix 1Secure Data Security Posture Management Edition
+  - Netwrix Identity Manager
+  - Netwrix 1Secure Identity Threat Detection and Response
+  seller_name: Netwrix Corporation
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
+- partner_name: Microsoft Azure Marketplace
+  partner: microsoft-azure
+  partner_match: aggregator
+  type: marketplace
+  marketplace: azure-marketplace
+  channel: distribution
+  relationship: platform-app
+  direction: provider-built
+  evidence: https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=Netwrix%20Corporation
+  listing_count: 1
+  apps:
+  - Netwrix 1Secure User-Hosted Data Classifier
+  seller_name: Netwrix Corporation
+  detected_by: sweep-cloud-marketplaces.py
+  detected: '2026-10-13'
