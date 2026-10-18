@@ -26,6 +26,12 @@ modified: '2026-10-03'
 
 tags:
 - Company
+- Data Security
+- Governance
+- Compliance
+- Privileged Access Management
+tags_raw:
+- Company
 - DataSecurity
 - Governance
 - Compliance
@@ -127,6 +133,8 @@ apis:
   humanURL: https://docs.netwrix.com/
   baseURL: https://accessgovernance.company.com
   tags:
+  - Authentication
+  tags_raw:
   - Oauth
   properties:
   - type: OpenAPI
@@ -139,6 +147,8 @@ apis:
   humanURL: https://docs.netwrix.com/
   baseURL: https://accessgovernance.company.com
   tags:
+  - Tokens
+  tags_raw:
   - Token
   properties:
   - type: OpenAPI
