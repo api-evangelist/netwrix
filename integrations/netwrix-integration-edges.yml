@@ -3,6 +3,7 @@ method: searched
 checked:
 - https://azuremarketplace.microsoft.com/
 - https://marketplace.atlassian.com/
+- zendesk/integrations/zendesk-integration-edges.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -57,5 +58,22 @@ edges:
   publisher_name: Netwrix Platform Governance(formerly Strongpoint.io)
   detected_by: sweep-devtools.py
   detected: '2026-10-14'
+- partner_name: Zendesk (own)
+  partner: zendesk
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.zendesk.com/marketplace/apps/support/577330/platform-governance-for-netsuite/
+  mirror_of: zendesk/integrations/zendesk-integration-edges.yml
+  apps:
+  - Platform Governance For NetSuite
+  listing_count: 1
+  detected: '2026-10-20'
+  detected_by: mirror-platform-listings.py
+  category: Product and Project Management
 source:
 - https://marketplace.atlassian.com/
